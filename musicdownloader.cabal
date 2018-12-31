@@ -1,0 +1,54 @@
+name:                musicdownloader
+version:             0.1.0.0
+synopsis:            Download, convert and tag music from youtube via last.fm
+description:         Given a song title and artist, download a youtube video, verify its audio fingerprint via MusicBrainz, convert it to mp3, tag it with the artist, title and album, and attach auto-downloaded album art.
+homepage:            http://github.com/zenhoth/musicdownloader#readme
+license:             GPLv3
+license-file:        LICENSE
+author:              Alexander Borysov
+maintainer:          borysovalexander@gmail.com
+copyright:           Copyright: (c) 2018 Alexander Borysov
+category:            Music
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Downloader
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:       aeson
+                     , base
+                     , basic-prelude
+                     , bytestring
+                     , containers
+                     , directory
+                     , http-conduit
+                     , hxt
+                     , HandsomeSoup
+                     , lens
+                     , lens-aeson
+                     , liblastfm
+                     , network-uri
+                     , process-extras
+                     , safe
+                     , safe-exceptions
+                     , temporary
+                     , text
+  default-language:    Haskell2010
+
+executable musicdownloader
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:       base
+                     , basic-prelude
+                     , directory
+                     , musicdownloader
+                     , temporary
+                     , text
+  default-language:    Haskell2010
+
+
+source-repository head
+  type:     git
+  location: https://github.com/zenhoth/musicdownloader
