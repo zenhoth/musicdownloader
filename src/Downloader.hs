@@ -170,6 +170,7 @@ convertAndTag trackFilename title artist album coverArt = do
             BS.hPut tempArtHandle coverArt
             _ <- readProcess "ffmpeg" ["-i", trackFilename,
                                        "-i", pack tempArtFilename,
+                                       "-y",
                                        "-map", "0:0",
                                        "-map", "1:0",
                                        "-b:0", "320K",
