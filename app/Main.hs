@@ -46,5 +46,5 @@ main = do
             case response of
                 'y' -> return ()
                 _ -> exitFailure
-        mp3Filename <- convertAndTag resultFile track artist album coverArt
+        mp3Filename <- convertAndTag resultFile detectedTrack (head detectedArtists) album coverArt
         putStrLn $ "Converted final result to: " ++ mp3Filename
