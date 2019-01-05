@@ -1,5 +1,5 @@
 name:                musicdownloader
-version:             0.1.0.0
+version:             0.1.1
 synopsis:            Download, convert and tag music from youtube via last.fm
 description:         Given a song title and artist, download a youtube video, verify its audio fingerprint via MusicBrainz, convert it to mp3, tag it with the artist, title and album, and attach auto-downloaded album art.
 homepage:            http://github.com/zenhoth/musicdownloader#readme
