@@ -19,7 +19,7 @@ If it fails to build, nixpkgs probably upgraded to a package version that broke 
 env NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixos-18.09.tar.gz nix-env -f default.nix -i
 ```
 This isn't done by default because of the potential for backwards-compatible bug fixes in the newer packages, and because using a fixed snapshot may require nix to perform some recompilation, depending on how much the nix binary cache keeps.
-##Usage
+## Usage
 You will need a [last.fm API key](https://www.last.fm/api/account/create) and an [AcoustID API key](https://acoustid.org/new-application). Provide them in the LAST_FM_API_KEY and ACOUSTID_API_KEY environment variables. Provide track title and artist in the `--title` and `--artist` arguments.
 
 Example:
